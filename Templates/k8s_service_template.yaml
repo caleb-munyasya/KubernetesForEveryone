@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 
+  name: supermarioservice
   labels:
-    app: 
+    app: supermario
 spec:
   ports:  
-  - port: < Specify port which will be exposed to the 'world'>  
-    targetPort: < Specify the container port>
+  - port: 80
+    targetPort: 80
   selector:
-    app: 
-  type: 
-  loadBalancerIP: 
+    app: supermario
+  type: LoadBalancer
